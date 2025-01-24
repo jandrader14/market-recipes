@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario y Recetas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="imagenes/vegetal.png" type="image/png">
+</head>
+<body>
+  <header>
+    <h1>Gestión de Inventario y Recetas</h1>
+  </header>
+
+  <section id="inventory">
+    <h2>Mi Inventario</h2>
+    <form id="add-item-form">
+      <input type="text" id="item-name" placeholder="Ingrediente" required>
+      <input type="number" id="item-quantity" placeholder="Cantidad" required>
+      <button type="submit">Añadir al Inventario</button>
+    </form>
+    <ul id="inventory-list"></ul>
+  </section>
+
+  <section id="recipes">
+    <h2>Recetas Sugeridas</h2>
+    <ul id="recipe-list"></ul>
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

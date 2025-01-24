@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="icon" href="./imagenes/vegetal.png" type="image/png" />
+    <title>Mercado y Recetas</title>
+  </head>
+  <body>
+    <form id="login-form" class="my-form">
+      <div class="login-welcome-row">
+        <a href="" title="Logo">
+          <img src="imagenes/verduras.png" alt="Logo" class="logo" />
+        </a>
+        <h1>Bienvenid@ &#x1F44F;</h1>
+        <p>Por favor agrega tu información!</p>
+      </div>
+      <div class="input__wrapper">        
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="input__field"
+          placeholder=""
+          required
+        />
+        <label for="email" class="input__label">Correo Electrónico:</label>        
+      </div>
+      <div class="input__wrapper">
+          <input type="password" id="password" class="input__field" placeholder=" " required pattern=".{6,}">
+          <label for="password" class="input__label">Contraseña:</label>
+      </div>
+      <button type="submit" class="form-btn">Ingresar</button>
+    </form>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

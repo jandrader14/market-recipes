@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="imagenes/vegetal.png" type="image/png">
+</head>
+<body class="body-dashboard">
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
+                <span class="brand">Mi Sitio</span>
+            </div>
+            <div class="navbar-right">
+                <button class="notification-icon">🔔</button>
+                <div class="profile-menu">
+                    <img src="images/profile.png" alt="Profile" class="profile-icon">
+                    <div class="profile-dropdown">
+                        <a href="#">Perfil</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorías</a></li>
+            <li><a href="#">Recetas</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <section id="categories" class="section">
+            <h2>Categorías</h2>
+            <!-- Aquí puedes agregar las categorías -->
+        </section>
+        <section id="suggested-recipes" class="section">
+            <h2>Recetas Sugeridas</h2>
+            <!-- Aquí puedes agregar las recetas sugeridas -->
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
