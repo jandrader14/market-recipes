@@ -1,0 +1,171 @@
+:root {
+  /*Global variables*/
+  --primary: #d4145a;
+  --text: #526581;
+  --white: #ffffff;
+  --icon: #8491a5;
+  --main: #dcdadd;
+  --welcome: #c4bea3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Work Sans", sans-serif;
+}
+
+header {
+  background-color: var(--main);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+header input[type="search"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  transition: margin-left 0.4s;
+}
+
+aside {
+  width: 60px;
+  background-color: var(--main);
+  padding: 1rem 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.4s;
+}
+
+aside:hover {
+  width: 250px;
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside nav ul li {
+  margin-bottom: 1rem;
+}
+
+aside nav ul li .submenu {
+  display: none;
+  padding-left: 1rem;
+}
+
+aside nav ul li:hover .submenu {
+  display: block;
+}
+
+aside nav ul li a {
+  padding: 1rem;
+  border-radius: 3px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 40px 1fr;
+  color: var(--primary);
+  fill:var(--primary);
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+aside nav ul li a:hover {
+  border-radius: 1.25rem;
+  background-color: var(--welcome);
+  color: var(--white);
+  fill: var(--white);
+}
+
+section {
+  padding: 1rem;
+  flex: 1 1 calc(33.333% - 1rem);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+footer {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+body aside:hover ~ main {
+  margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+  main {
+      flex-direction: column;
+  }
+
+  aside {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+  }
+
+  aside:hover {
+      width: 100%;
+  }
+
+  body aside:hover ~ main {
+      margin-left: 0;
+  }
+
+  section {
+      padding: 1rem;
+      flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header .search-bar {
+      margin-top: 1rem;
+      width: 100%;
+  }
+
+  header input[type="search"] {
+      width: 100%;
+  }
+
+  aside nav ul li a {
+      grid-template-columns: 30px 1fr;
+  }
+
+  aside {
+      padding: 0.5rem;
+  }
+
+  footer {
+      font-size: 0.9rem;
+  }
+}

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Verifica las credenciales
       if (email === defaultEmail && password === defaultPassword) {
         // Redirige a otra página
-        window.location.href = 'dashboard.html';
+        window.location.href = 'src/dashboard/dashboard.html';
       } else {
         alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
       }
