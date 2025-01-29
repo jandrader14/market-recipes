@@ -1,0 +1,30 @@
+{
+  "name": "market-recipes",
+  "version": "1.0.0",
+  "description": "Proyecto personal TechCamp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jandrader14/market-recipes.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Johanna Andrade <andrader.johanna@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jandrader14/market-recipes/issues"
+  },
+  "homepage": "https://github.com/jandrader14/market-recipes#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
