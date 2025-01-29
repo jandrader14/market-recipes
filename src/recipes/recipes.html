@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenedor con Imagen Sobresaliente</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    .container {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      padding: 20px 20px 20px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .text-content {
+      flex: 1;
+    }
+
+    .text-content h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .text-content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .image {
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      transform: translateY(-50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-content">
+      <h1>Título del Contenedor</h1>
+      <p>Este es un párrafo alineado a la izquierda. Puedes personalizarlo según tus necesidades.</p>
+    </div>
+    <img src="https://via.placeholder.com/120" alt="Imagen Sobresaliente" class="image">
+  </div>
+</body>
+</html>
