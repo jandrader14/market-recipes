@@ -10,10 +10,9 @@
           option.value = product.name;
           option.textContent = product.name;
           productSelect.appendChild(option);
-        });
-      })
-      .catch(error => console.error('Error al obtener los productos:', error));
-  });
+    });
+  })
+  .catch(error => console.error('Error al obtener los productos:', error));
 
   // JavaScript para manejar el formulario
   document.getElementById('product-form').addEventListener('submit', async function(event) {
