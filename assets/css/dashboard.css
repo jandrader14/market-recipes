@@ -182,8 +182,10 @@ section {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, auto);
-  padding: 1rem;
+  grid-template-rows: repeat(1, 1fr);
+  width: 100%;
+  max-width: 1200px;
+  
 }
 
 
@@ -213,32 +215,49 @@ section {
   margin: 10px;
   overflow-wrap: break-word;
   padding: 1rem;
+  width: 100%;
+  max-width: 600px;
 }
 
-.categories_item1 span,
-.categories_item2 span,
-.categories_item3 span,
-.categories_item4 span {
-  color: var(--white);
+.categories_item1_text,
+.categories_item2_text,
+.categories_item3_text,
+.categories_item4_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 100%;
+}
+
+.categories_item1_text span,
+.categories_item2_text span,
+.categories_item3_text span,
+.categories_item4_text span {
   font-size: 1rem;
-  padding: 5px;
-  margin: 10px;
-  text-align: center;
-  display: block; /* Asegura que el span se comporte como un bloque */
-  hyphens: auto; /* Permite que las palabras largas se dividan y ajusten al contenedor */
-  overflow-wrap: break-word; /* Permite que las palabras largas se dividan y ajusten al contenedor */
-  width: 100%; /* Asegura que el span ocupe todo el ancho del contenedor */
-  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  font-weight: bold;
+  color: #5C3D2E;
 }
 
-.categories_item1 img,
-.categories_item2 img,
-.categories_item3 img,
-.categories_item4 img {
-  width: 80px;
-  height: 80px;
+.categories_item1_image,
+.categories_item2_image,
+.categories_item3_image,
+.categories_item4_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.categories_item1_image img,
+.categories_item2_image img,
+.categories_item3_image img,
+.categories_item4_image img {
+  max-width: 80px;
+  height: auto;
+  max-height: 80px;
   object-fit: contain;
 }
+
 
 /*----------------------------*/
 
