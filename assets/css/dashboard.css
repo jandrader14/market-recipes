@@ -106,15 +106,15 @@ section {
 /*--------------------------------------------*/
 .welcome-main-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; 
+  align-items: center; 
   box-sizing: border-box;
   margin: 0;
   padding: 2rem;
 }
 
 .welcome-container {
-  align-items: center; /* Centra verticalmente */
+  align-items: center;
   background-color: var(--welcome); /* Fondo del contenedor principal */
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -159,49 +159,60 @@ section {
 
 /*--------------------------------------------*/
 .categories-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem; /* Espacio entre el título y los elementos de categoría */
-  padding: 1rem;
-  border-radius: 20px;
   background-color: #fbfbfb;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .categories-title {
-  display: block;
-  text-align: left; /* Alinea el texto a la izquierda */
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-  padding: 1rem;
-  margin: 0;
+    align-items: flex-start;
+    display: flex;
+    justify-content: left;
+    width: 100%;
 }
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño */
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, auto);
-  gap: 5rem; /* Espacio entre las grillas */
   padding: 1rem;
 }
 
+
+.categories_item1{
+  background-color: #F2E3C6;
+}
+.categories_item2{
+  background-color: #E5C2A2;
+}
+.categories_item3{
+  background-color: #F0DFAF;
+}
+.categories_item4{
+  background-color: #BFC8AD;
+}
 .categories_item1,
 .categories_item2,
 .categories_item3,
 .categories_item4 {
-  background-color: var(
-    --text
-  ); /* Ajusta el color de fondo según sea necesario */
+  align-items: center;
   border-radius: 50px;
+  box-shadow: 4px 4px 10px rgba(139, 94, 59, 0.5);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem; /* Espacio entre el título y la imagen dentro de cada categoría */
-  text-align: center;
-  padding: 1rem;
-  overflow-wrap: break-word;
-  box-sizing: border-box;
+  gap: 0.5rem;
   margin: 10px;
+  overflow-wrap: break-word;
+  padding: 1rem;
 }
 
 .categories_item1 span,
