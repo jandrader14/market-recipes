@@ -1,17 +1,17 @@
 :root {
   /*Global variables*/
-  --primary: #d4145a;
-  --text: #526581;
-  --white: #ffffff;
   --icon: #8491a5;
   --main: #dcdadd;
+  --primary: #d4145a;
+  --text: #526581;
   --welcome: #c4bea3;
+  --white: #ffffff;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  background-color: #FBF6E9;
+  background-color: #fbf6e9;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -49,7 +49,6 @@ main {
 }
 
 aside {
-  
   width: 60px;
   background-color: #f4f5f7;
   padding: 1rem 0.5rem;
@@ -86,12 +85,12 @@ aside nav ul li a {
   align-items: center;
   grid-template-columns: 40px 1fr;
   color: var(--primary);
-  fill:var(--primary);
+  fill: var(--primary);
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
-aside nav ul li a:hover {  
+aside nav ul li a:hover {
   background-color: var(--welcome);
   color: var(--white);
   fill: var(--white);
@@ -111,21 +110,42 @@ section {
   align-items: center; /* Centra verticalmente el contenido */
   box-sizing: border-box;
   margin: 0;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .welcome-container {
-  display: flex;
   align-items: center; /* Centra verticalmente */
-  flex-wrap: wrap;
   background-color: var(--welcome); /* Fondo del contenedor principal */
   border-radius: 20px;
-  padding: 1rem;
-  width:100%;  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  height: 100%;
+  max-height: 150px;
+  padding: 1rem;
+  width: 100%;
 }
 
-.welcome-container h1 {  
+.welcome-text {
+  width: 100%;
+  max-width: 60%;
+}
+
+.welcome-image {
+  width: 100%;
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-image img {
+  position: relative;
+  bottom: 5px;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  max-height: 650px;
+}
+.welcome-container h1 {
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
@@ -137,13 +157,6 @@ section {
   line-height: 1.5;
 }
 
-.welcome-container img {
-  max-width: 150px; /* Ajusta el tamaño máximo de la imagen */
-  height: auto;
-  margin-left: 20px; /* Espacio entre el texto y la imagen */
-  border-radius: 50px;
-  
-}
 /*--------------------------------------------*/
 .categories-container {
   display: flex;
@@ -152,12 +165,12 @@ section {
   gap: 1rem; /* Espacio entre el título y los elementos de categoría */
   padding: 1rem;
   border-radius: 20px;
-  background-color:#fbfbfb;
+  background-color: #fbfbfb;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .categories-title {
-  display:block;
+  display: block;
   text-align: left; /* Alinea el texto a la izquierda */
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
   padding: 1rem;
@@ -167,17 +180,18 @@ section {
 .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño */
-  grid-template-rows: repeat(1, auto); 
+  grid-template-rows: repeat(1, auto);
   gap: 5rem; /* Espacio entre las grillas */
-  padding: 1rem;  
-  
+  padding: 1rem;
 }
 
 .categories_item1,
 .categories_item2,
 .categories_item3,
 .categories_item4 {
-  background-color: var(--text); /* Ajusta el color de fondo según sea necesario */
+  background-color: var(
+    --text
+  ); /* Ajusta el color de fondo según sea necesario */
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -185,7 +199,7 @@ section {
   gap: 0.5rem; /* Espacio entre el título y la imagen dentro de cada categoría */
   text-align: center;
   padding: 1rem;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   box-sizing: border-box;
   margin: 10px;
 }
@@ -198,7 +212,7 @@ section {
   font-size: 1rem;
   padding: 5px;
   margin: 10px;
-  text-align: center; 
+  text-align: center;
   display: block; /* Asegura que el span se comporte como un bloque */
   hyphens: auto; /* Permite que las palabras largas se dividan y ajusten al contenedor */
   overflow-wrap: break-word; /* Permite que las palabras largas se dividan y ajusten al contenedor */
@@ -217,7 +231,7 @@ section {
 
 /*----------------------------*/
 
-.recipes-suggest{
+.recipes-suggest {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,9 +313,6 @@ section {
   color: #e74c3c;
 }
 
-
-
-
 footer {
   background-color: #f8f8f8;
   text-align: center;
@@ -315,53 +326,53 @@ body aside:hover ~ main {
 
 @media (max-width: 768px) {
   main {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   aside {
-      width: 100%;
-      border-right: none;
-      border-bottom: 1px solid #ddd;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
   }
 
   aside:hover {
-      width: 100%;
+    width: 100%;
   }
 
   body aside:hover ~ main {
-      margin-left: 0;
+    margin-left: 0;
   }
 
   section {
-      padding: 1rem;
-      flex: 1 1 100%;
+    padding: 1rem;
+    flex: 1 1 100%;
   }
 }
 
 @media (max-width: 480px) {
   header {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   header .search-bar {
-      margin-top: 1rem;
-      width: 100%;
+    margin-top: 1rem;
+    width: 100%;
   }
 
   header input[type="search"] {
-      width: 100%;
+    width: 100%;
   }
 
   aside nav ul li a {
-      grid-template-columns: 30px 1fr;
+    grid-template-columns: 30px 1fr;
   }
 
   aside {
-      padding: 0.5rem;
+    padding: 0.5rem;
   }
 
   footer {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 }
