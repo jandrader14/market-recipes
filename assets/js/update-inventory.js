@@ -1,33 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Simulación de datos existentes (esto vendría de una base de datos en una app real)
-    const existingProduct = {
-        name: "Manzana",
-        quantity: 5,
-        category: "frutas-verduras",
-        price: 3.50,
-        description: "Manzanas frescas importadas."
+document.getElementById("edit-product-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const updatedProduct = {
+        nombre: document.getElementById("edit-product-name").value,
+        cantidad: document.getElementById("edit-quantity").value,
+        categoria: document.getElementById("edit-category").value,
+        precio: document.getElementById("edit-price").value,
+        descripcion: document.getElementById("edit-description").value,
     };
 
-    // Precargar los datos en el formulario
-    document.getElementById("edit-product-name").value = existingProduct.name;
-    document.getElementById("edit-quantity").value = existingProduct.quantity;
-    document.getElementById("edit-category").value = existingProduct.category;
-    document.getElementById("edit-price").value = existingProduct.price;
-    document.getElementById("edit-description").value = existingProduct.description;
-
-    // Manejar la actualización del producto
-    document.getElementById("edit-product-form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        
-        const updatedProduct = {
-            name: document.getElementById("edit-product-name").value,
-            quantity: document.getElementById("edit-quantity").value,
-            category: document.getElementById("edit-category").value,
-            price: document.getElementById("edit-price").value,
-            description: document.getElementById("edit-description").value,
-        };
-
-        console.log("Producto actualizado:", updatedProduct);
-        alert("¡Producto actualizado con éxito!");
+    const response = await fetch("http://localhost:5000/api/productos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedProduct)
     });
+
+    if (response.ok) {
+        alert("Producto actualizado en la base de datos✅");
+    } else {
+        alert("Error al actualizar producto😭");
+    }
 });
