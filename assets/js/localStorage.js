@@ -8,6 +8,7 @@ document.getElementById("product-form").addEventListener("submit", function (eve
         name: document.getElementById("product-name").value,
         quantity: document.getElementById("quantity").value,
         category: document.getElementById("category").value,
+        unit: document.getElementById("unit").value,
         price: document.getElementById("price").value,
         description: document.getElementById("description").value
     };
@@ -41,6 +42,7 @@ function loadProducts() {
         <p><strong>Nombre:</strong> ${product.name}</p>
         <p><strong>Cantidad:</strong> ${product.quantity}</p>
         <p><strong>Categoría:</strong> ${product.category}</p>
+        <p><strong>Unidad de medida:</strong> ${product.unit}</p>
         <p><strong>Precio:</strong> $${product.price}</p>
         <p><strong>Descripción:</strong> ${product.description}</p>
         <button onclick="deleteProduct(${index})">🗑️ Eliminar</button>

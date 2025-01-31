@@ -18,6 +18,7 @@
 }
 
 body {
+  
   display: flex;
   flex-direction: column;
   font-family: "Nunito", sans-serif;
@@ -60,14 +61,19 @@ section {
 }
 
 .form-container h2 {
+  color: var(--primary);  
   margin-bottom: 1rem;
 }
 
 .form-group {
+  color: var(--text) ;
   margin-bottom: 1rem;
 }
 
 .form-group label {
+  color: var(--text);
+  font-family: 'Nunito', sans-serif; 
+  font-weight: bolder;
   display: block;
   margin-bottom: 0.5rem;
 }
