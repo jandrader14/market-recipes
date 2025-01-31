@@ -40,6 +40,7 @@ main {
 .main-title {
   color: var(--title);
   font-family: "Dancing Script", cursive;
+  font-size: 2rem;
   margin: 0;
   padding: 1rem;
   text-align: left;
@@ -53,6 +54,7 @@ main {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   justify-content: center;
   margin: 0;
   padding: 1rem;
@@ -69,23 +71,39 @@ main {
 }
 .products-main-container {
   background-color: var(--main);
+  border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem; /* Espacio entre los elementos de la cuadrícula */
+  grid-gap: 3rem; /* Espacio entre los elementos de la cuadrícula */
   padding: 1rem;
+  width: 100%;
 }
 
 .product-container {
-  background-color: #f8f8f8;
-border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-radius: 10px;
   padding: 1rem;
   text-align: center;
   box-sizing: border-box;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
 }
 
-.product-container img {
-  width: 100%;
-  border-radius: 10px;
+.product-image {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  height: 150px; /* Set a fixed height for the container */
+  width: 150px; /* Set a fixed width for the container */
+}
+
+.product-image img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
 .product-info {
@@ -106,6 +124,7 @@ border-radius: 10px;
 .product-info p {
   color: var(--color-paragraph);
   font-size: 1rem;
+  font-weight: lighter;
   margin: 0;
   padding: 1rem;
 }

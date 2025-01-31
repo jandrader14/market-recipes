@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/css/inventory.css" />
     <link rel="icon" href="imagenes/vegetal.png" type="image/png" />
     <script src="/assets/js/load-components.js" defer></script>
+    <script src="/assets/js/update-inventory.js"></script>
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -54,8 +55,16 @@
                 </div>
               </a>
               <ul class="submenu">
-                <li><a href="/src/inventory/registerInv.html">Registrar elementos</a></li>
-                <li><a href="/src/inventory/updateInv.html">Actualizar inventario</a></li>
+                <li>
+                  <a href="/src/inventory/registerInv.html"
+                    >Registrar elementos</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/inventory/updateInv.html"
+                    >Actualizar inventario</a
+                  >
+                </li>
               </ul>
             </li>
             <li>
@@ -144,8 +153,8 @@
                 <p>Stock: 5</p>
               </div>
               <div class="product-btn">
-                <button class="btn">Editar</button>
-                <button class="btn">Eliminar</button>
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Eliminar</button>
               </div>
             </div>
 
@@ -154,7 +163,7 @@
                 <img src="/assets/imagenes/platano.png" alt="banana" />
               </div>
               <div class="product-info">
-                <p>Bananos</p>
+                <h3>Bananos</h3>
                 <p>Stock: 10</p>
               </div>
               <div class="product-btn">
@@ -167,7 +176,7 @@
                 <img src="/assets/imagenes/tomate.png" alt="manzana" />
               </div>
               <div class="product-info">
-                <p>Tomates</p>
+                <h3>Tomates</h3>
                 <p>Stock: 4</p>
               </div>
               <div class="product-btn">
@@ -180,7 +189,7 @@
                 <img src="/assets/imagenes/zanahoria.png" alt="manzana" />
               </div>
               <div class="product-info">
-                <p>Zanahoria</p>
+                <h3>Zanahoria</h3>
                 <p>Stock: 3</p>
               </div>
               <div class="product-btn">
@@ -201,7 +210,7 @@
                 <img src="/assets/imagenes/leche.png" alt="milk" />
               </div>
               <div class="product-info">
-                <p>Leche</p>
+                <h3>Leche</h3>
                 <p>Stock: 5</p>
               </div>
               <div class="product-btn">
@@ -211,10 +220,13 @@
             </div>
             <div class="product-container">
               <div class="product-image">
-                <img src="/assets/imagenes/rebanada-de-queso.png" alt="cheese" />
+                <img
+                  src="/assets/imagenes/rebanada-de-queso.png"
+                  alt="cheese"
+                />
               </div>
               <div class="product-info">
-                <p>Queso</p>
+                <h3>Queso</h3>
                 <p>Stock: 10</p>
               </div>
               <div class="product-btn">
@@ -228,7 +240,7 @@
                 <img src="/assets/imagenes/huevo.png" alt="eggs" />
               </div>
               <div class="product-info">
-                <p>Huevos</p>
+                <h3>Huevos</h3>
                 <p>Stock: 4</p>
               </div>
               <div class="product-btn">
@@ -238,12 +250,12 @@
             </div>
 
             <div class="product-container">
-              <div class="products-image">
-                <img src="/assets/imagenes/yogurt-congelado.png" alt="yogurt" />
+              <div class="product-image">
+                <img src="/assets/imagenes/yogurt-congelado.png" alt="eggs" />
               </div>
               <div class="product-info">
-                <p>Yogurt</p>
-                <p>Stock: 3</p>
+                <h3>Yogurt</h3>
+                <p>Stock: 4</p>
               </div>
               <div class="product-btn">
                 <button class="btn">Editar</button>
@@ -263,7 +275,7 @@
                 <img src="/assets/imagenes/bife.png" alt="meat" />
               </div>
               <div class="product-info">
-                <p>Carne</p>
+                <h3>Carne</h3>
                 <p>Stock: 5</p>
               </div>
               <div class="product-btn">
@@ -271,13 +283,13 @@
                 <button class="btn">Eliminar</button>
               </div>
             </div>
-  
+
             <div class="product-container">
               <div class="product-image">
                 <img src="/assets/imagenes/pollo.png" alt="chicken" />
               </div>
               <div class="product-info">
-                <p>Pollo</p>
+                <h3>Pollo</h3>
                 <p>Stock: 10</p>
               </div>
               <div class="product-btn">
@@ -285,13 +297,13 @@
                 <button class="btn">Eliminar</button>
               </div>
             </div>
-  
+
             <div class="product-container">
               <div class="product-image">
                 <img src="/assets/imagenes/mojarra.png" alt="fish" />
               </div>
               <div class="product-info">
-                <p>Mojarra</p>
+                <h3>Mojarra</h3>
                 <p>Stock: 4</p>
               </div>
               <div class="product-btn">
@@ -299,22 +311,20 @@
                 <button class="btn">Eliminar</button>
               </div>
             </div>
-  
+
             <div class="product-container">
               <div class="product-image">
                 <img src="/assets/imagenes/salmon.png" alt="salmon" />
               </div>
               <div class="product-info">
-                <p>Salmón</p>
+                <h3>Salmón</h3>
                 <p>Stock: 3</p>
               </div>
               <div class="product-btn">
                 <button class="btn">Editar</button>
                 <button class="btn">Eliminar</button>
               </div>
-
-          </div>
-          
+            </div>
           </div>
         </div>
 
@@ -328,7 +338,7 @@
                 <img src="/assets/imagenes/bol-de-arroz.png" alt="rice" />
               </div>
               <div class="product-info">
-                <p>Arroz</p>
+                <h3>Arroz</h3>
                 <p>Stock: 5</p>
               </div>
               <div class="product-btn">
@@ -336,13 +346,13 @@
                 <button class="btn">Eliminar</button>
               </div>
             </div>
-  
+
             <div class="product-container">
               <div class="product-image">
                 <img src="/assets/imagenes/harina.png" alt="harina trigo" />
               </div>
               <div class="product-info">
-                <p>Trigo</p>
+                <h3>Trigo</h3>
                 <p>Stock: 10</p>
               </div>
               <div class="product-btn">
@@ -350,13 +360,13 @@
                 <button class="btn">Eliminar</button>
               </div>
             </div>
-  
+
             <div class="product-container">
               <div class="product-image">
                 <img src="/assets/imagenes/alubias-rojas.png" alt="beans" />
               </div>
               <div class="product-info">
-                <p>Frijol</p>
+                <h3>Frijol</h3>
                 <p>Stock: 4</p>
               </div>
               <div class="product-btn">
@@ -364,13 +374,13 @@
                 <button class="btn">Eliminar</button>
               </div>
             </div>
-  
+
             <div class="product-container">
               <div class="product-image">
                 <img src="/assets/imagenes/un-pan.png" alt="bread" />
               </div>
               <div class="product-info">
-                <p>Pan</p>
+                <h3>Pan</h3>
                 <p>Stock: 3</p>
               </div>
               <div class="product-btn">
@@ -382,5 +392,6 @@
         </div>
       </section>
     </main>
+    
   </body>
 </html>

@@ -21,3 +21,5 @@ document.getElementById("edit-product-form").addEventListener("submit", async (e
         alert("Error al actualizar producto😭");
     }
 });
+
+  
