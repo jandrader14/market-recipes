@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 header {
