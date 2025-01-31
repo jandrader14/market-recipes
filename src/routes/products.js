@@ -1,29 +1,28 @@
 const express = require('express');
+const router = express.Router();
 const Product = require('../models/Product');
 
-const router = express.Router();
 
-// Crear un nuevo producto
-router.post('/', async (req, res) => {
-  const { name, quantity, category, price, description } = req.body;
 
-  const newProduct = new Product({ name, quantity, category, price, description });
-
+// Create a new product
+router.post("/", async (req, res) => {
   try {
+    const newProduct = new Product(req.body);
     await newProduct.save();
-    res.status(201).json(newProduct);
+    res.status(201).json({ mensaje: "Producto registrado", producto: newProduct });
   } catch (error) {
-    res.status(409).json({ message: error.message });
+    console.log(error);
+    res.status(500).json({ error: "Error al registrar producto" });
   }
 });
 
 // Obtener todos los productos
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    const products = await Product.find();
-    res.status(200).json(products);
+    const productos = await Producto.find();
+    res.json(productos);
   } catch (error) {
-    res.status(404).json({ message: error.message });
+    res.status(500).json({ error: "Error al obtener productos" });
   }
 });
 

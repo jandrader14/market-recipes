@@ -1,4 +1,7 @@
+//Define the structure of the product data that will be stored in the database.
+
 const mongoose = require('mongoose');
+
 
 const productSchema = mongoose.Schema({
   name: { type: String, required: true },
