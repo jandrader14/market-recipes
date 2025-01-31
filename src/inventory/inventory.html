@@ -1,26 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventario y Recetas</title>
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="icon" href="imagenes/vegetal.png" type="image/png">
-  <script src="/assets/js/load-components.js" defer></script>
-</head>
-<body>
-  <div id="header-placeholder"></div>
-  
-  <main>
-    <div id="aside-placeholder"></div>
-    <section>
-      <div>
-        <h1>Tu inventario</h1>
-      </div>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario</title>
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/inventory.css" />
+    <link rel="icon" href="imagenes/vegetal.png" type="image/png" />
+    <script src="/assets/js/load-components.js" defer></script>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <main>
+      <div id="aside-placeholder"></div>
+      <section class="main-section">
+        <div class="main-title">
+          <h1>Tu inventario</h1>
+        </div>
 
-  </main>
+        <div class="fruits-veggies-category">
+          <div class="fruits-veggies-title">
+            <h2>Frutas y Verduras</h2>
+          </div>
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Manzana</p>
+              <p>Stock: 5</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Bananos</p>
+              <p>Stock: 10</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Tomates</p>
+              <p>Stock: 4</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Zanahoria</p>
+              <p>Stock: 3</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dairy-products-category">
+          <div class="fruits-veggies-title">
+            <h2>Lácteos y Huevos</h2>
+          </div>
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Manzana</p>
+              <p>Stock: 5</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Bananos</p>
+              <p>Stock: 10</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Tomates</p>
+              <p>Stock: 4</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Zanahoria</p>
+              <p>Stock: 3</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="meat-category">
+          <div class="fruits-veggies-title">
+            <h2>Carnes,Pollo y Pescado</h2>
+          </div>
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Manzana</p>
+              <p>Stock: 5</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Bananos</p>
+              <p>Stock: 10</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Tomates</p>
+              <p>Stock: 4</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Zanahoria</p>
+              <p>Stock: 3</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grains-category">
+          <div class="fruits-veggies-title">
+            <h2>Carnes,Pollo y Pescado</h2>
+          </div>
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Manzana</p>
+              <p>Stock: 5</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Bananos</p>
+              <p>Stock: 10</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Tomates</p>
+              <p>Stock: 4</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="fruits-veggies-container">
+            <div class="fruits-veggies-image">
+              <img src="imagenes/apple.png" alt="manzana" />
+            </div>
+            <div class="fruits-veggies-info">
+              <p>Zanahoria</p>
+              <p>Stock: 3</p>
+            </div>
+            <div class="fruits-veggies-btn">
+              <button class="btn">Editar</button>
+              <button class="btn">Eliminar</button>
+            </div>
+          </div>
+        </div>
 
 
-</body>
+      </section>
+    </main>
+  </body>
 </html>
