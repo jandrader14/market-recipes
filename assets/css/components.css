@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root {
+  /*Global variables*/
+  --icon: #8491a5;
+  --main: #dcdadd;
+  --primary: #d4145a;
+  --text: #526581;
+  --welcome: #c4bea3;
+  --white: #ffffff;
+  --title: #5c3d2e;
+  --color-paragraph: #8b7d6b;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+}
+
+body aside:hover ~ main {
+    margin-left: 250px;
+  }
+header {
+  background-color: #f5f5dc;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  color: var(--title);
+  font-family: "Dancing Script", cursive;
+}
+
+header .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+header input[type="search"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  transition: margin-left 0.4s;
+}
+
+aside {
+  width: 60px;
+  background-color: #f4f5f7;
+  padding: 1rem 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.4s;
+}
+
+aside:hover {
+  width: 250px;
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside nav ul li {
+  margin-bottom: 1rem;
+}
+
+aside nav ul li .submenu {
+  display: none;
+  padding-left: 1rem;
+}
+
+aside nav ul li:hover .submenu {
+  display: block;
+}
+
+aside nav ul li a {
+  padding: 1rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 40px 1fr;
+  color: var(--primary);
+  fill: var(--primary);
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+aside nav ul li a:hover {
+  background-color: var(--welcome);
+  color: var(--white);
+  fill: var(--white);
+}
+
+section {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  flex: 1 1 calc(33.333% - 1rem);
+  padding-top: 2.5rem;
+}

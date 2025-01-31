@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Redirige a otra página
         window.location.href = 'src/dashboard/dashboard.html';
       } else {
-        alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
+        alert('Credenciales incorrectas o usuario no válido. Por favor, inténtalo de nuevo.');
       }
     });
   });
